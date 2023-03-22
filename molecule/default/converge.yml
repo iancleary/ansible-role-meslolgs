@@ -4,3 +4,5 @@
 
   roles:
     - role: iancleary.meslolgs
+      variable:
+        ansible_user: "runner"
