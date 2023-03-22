@@ -16,10 +16,8 @@
   when: ansible_os_family == 'RedHat'
 
 - name: Create font directory
-  file:
+  ansible.builtin.file:
     path: "~/.local/share/fonts"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
     state: directory
 
 - name: Set font cache update fact
