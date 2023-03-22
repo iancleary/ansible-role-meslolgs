@@ -1,9 +1,19 @@
 ---
-- name: install fontconfig
+- name: install fontconfig (apt)
   become: true
-  ansible.builtin.package:
+  ansible.builtin.apt:
     name: fontconfig
     state: present
+    update_cache: true
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'elementary OS'
+
+- name: install fontconfig (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name: fontconfig
+    state: present
+    update_cache: true
+  when: ansible_os_family == 'RedHat'
 
 - name: Create font directory
   file:
