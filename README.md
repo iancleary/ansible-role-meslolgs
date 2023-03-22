@@ -18,7 +18,6 @@ ansible-role-meslolgs
 
 This role installs the MesloLGS fonts according to [romkatv/powerlevel10k#fonts](https://github.com/romkatv/powerlevel10k#fonts).
 
-> Only cloning via ssh is supported, at the current moment, as that was my initial use case.
 
 Requirements
 ------------
